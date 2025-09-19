@@ -110,4 +110,4 @@ with open(summary_stat_path, 'w', encoding='utf-8') as f:
     f.write(f"Overall Accuracy: {overall_accuracy:.2f}%\n")
     f.write("=" * 60 + "\n")
 
-print(f"\n✅ 已完成：只计算准确率，结果保存在：{summary_stat_path}")
+print(f"\n 结果保存在：{summary_stat_path}")
