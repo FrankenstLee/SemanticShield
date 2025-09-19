@@ -1,6 +1,14 @@
 # SemanticShield
 
-## Using the Model
+## Training the Model
+
+```bash
+cd grpo
+
+nohup bash -c "CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --multi_gpu train.py" > ../log/log1.log 2>&1 &
+```
+
+## Using the Pretrained Model
 
 If you want to directly use our model, you can download it from Hugging Face as follows:
 
