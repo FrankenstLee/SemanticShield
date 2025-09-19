@@ -7,7 +7,18 @@ cd grpo
 
 nohup bash -c "CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --multi_gpu train.py" > ../log/log1.log 2>&1 &
 ```
+After training the model, you can run the auditing script by navigating into the audit folder and executing the script:
 
+```bash
+cd audit
+
+python audit_users.py \
+  --dataset Clothing \
+  --data_dir ./data4llm/Clothing \
+  --out_dir ./out/Clothing \
+  --model_path ../checkpoints/best_model \   # change this to the path where your trained model is saved
+  --device 0
+```
 ## Using the Pretrained Model
 
 If you want to directly use our model, you can download it from Hugging Face as follows:

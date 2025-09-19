@@ -173,7 +173,7 @@ def nonsense_penalty(prompts, completions, **kwargs):
 
 # 训练配置
 config = GRPOConfig(
-    output_dir="/media2/lkh/models/v4",
+    output_dir="../checkpoints/model",
     per_device_train_batch_size=2,
     gradient_accumulation_steps=4,
     num_generations=8,
@@ -195,7 +195,7 @@ config = GRPOConfig(
 try:
     logging.info("开始初始化 GRPOTrainer")
     trainer = GRPOTrainer(
-        model="/media2/lkh/models/v3/checkpoint-6441",
+        model="../Qwen2.5-1.5B-Instruct",
         reward_funcs=[user_reward_func, format_reward, format_bonus_reward, verbose_think_reward, consistency_reward, nonsense_penalty],
         train_dataset=train_dataset,
         args=config,
