@@ -20,7 +20,7 @@ python audit_users.py \
   --out_dir ./out/Clothing \
   --model_path ../SemanticShield \
   --device 0
-
+'''
 
 <h2>Requirements</h2>
 ```
