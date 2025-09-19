@@ -1,17 +1,17 @@
 # SemanticShield
 
-<h2>Using the Model<h2>
+## Using the Model
 
 If you want to directly use our model, you can download it from Hugging Face as follows:
 
 ```bash
-# Make sure Hugging Face CLI is installed
 pip install -U "huggingface_hub[cli]"
 
 hf download Luka772001/SS --local-dir ./SemanticShield --local-dir-use-symlinks False
+```
+After downloading the model, you can run the auditing script by navigating into the audit folder and executing the script.
 
-# After downloading the model, you can run the auditing script by navigating into the audit folder and executing the script.
-
+```bash
 cd audit
 
 python audit_users.py \
@@ -22,7 +22,7 @@ python audit_users.py \
   --device 0
 ```
 
-<h2>Requirements</h2>
+## Requirements
 ```
 python==3.10
 torch==2.4.1
