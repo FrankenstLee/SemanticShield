@@ -1,5 +1,5 @@
 # count_score.py
-log_path = "../logs/output4.log"
+log_path = "../logs/output.log"
 targets = ["<answer>\nReal\n</answer>","<answer>\nFake\n</answer>","奖励: 1.0","奖励: -1.0","严重错误"]
 
 with open(log_path, 'r', encoding='utf-8') as f:
