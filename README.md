@@ -2,7 +2,7 @@
 
 SemanticShield implements a two-stage defense for shilling-attack detection: behavioral pre-screening plus LLM-based semantic auditing, strengthened with GRPO fine-tuning.
 
-## Repository layout (project root: `SemanticShield/`)
+## Repository layout 
 - `src/semanticshield/` — library code (training + audit).
 - `scripts/` — CLI entrypoints (train, merge data, chat templating, audit, summarize, log stats).
 - `data/datasets/` — training data (`original/` JSONL).
@@ -61,8 +61,3 @@ python scripts/gen.py \
   --input_dir ./outputs/audit/Clothing \
   --summary_path ./outputs/audit/Clothing/summary_report.txt
 ```
-
-## Notes
-- Core logic unchanged; layout is now src+scripts+data to stay conventionally organized.
-- Defaults expect the base model at `./Qwen2.5-1.5B-Instruct`; adjust paths as needed.
-- Behavior-stage filters are assumed precomputed; this repo focuses on LLM auditing and GRPO refinement.
