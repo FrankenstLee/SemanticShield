@@ -1,6 +1,7 @@
 # SemanticShield
 
 SemanticShield implements a two-stage defense for shilling-attack detection: behavioral pre-screening plus LLM-based semantic auditing, strengthened with GRPO fine-tuning.
+This repository will demonstrate how to use GRPO to fine-tune LLMs for the second-stage defense.
 
 ## Repository layout 
 - `src/semanticshield/` — library code (training + audit).
