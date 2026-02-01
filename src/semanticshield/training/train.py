@@ -50,7 +50,7 @@ def build_trainer(
         num_generations=8,
         max_prompt_length=8192,
         log_completions=True,
-        report_to="wandb",
+        report_to="none",
         run_name=run_name,
         logging_steps=10,
         logging_first_step=True,
